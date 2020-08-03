@@ -1,0 +1,1 @@
+get_credit_info_sql = 'select * from credit_info'

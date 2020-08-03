@@ -1,6 +1,8 @@
 from abc import abstractmethod
 
-from src.utils.read_config import ConfigReader
+from pandas import DataFrame
+
+from src.utils.ReadConfig import ConfigReader
 
 
 class DataSourceBase:
@@ -9,4 +11,8 @@ class DataSourceBase:
 
     @abstractmethod
     def execute(self, sql: str):
+        pass
+
+    @abstractmethod
+    def get_data(self, sql: str) -> DataFrame:
         pass
